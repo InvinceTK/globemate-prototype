@@ -232,16 +232,8 @@ const homescreen = () => {
         )}
       />
 
-      {/* Bottom Navigation */}
-      <View style={styles.bottomNav}>
-        <Ionicons name="home-outline" size={24} color="black" />
-        <Ionicons name="fast-food-outline" size={24} color="black" />
-        <TouchableOpacity onPress={()=>navigator.navigate("fscreen")}>
-          <Ionicons name="book-outline" size={24} color="black" />
-          </TouchableOpacity>
-        
-        <Ionicons name="chatbubbles-outline" size={24} color="black" />
-      </View>
+     
+      
     </SafeAreaView>
   );
 };
