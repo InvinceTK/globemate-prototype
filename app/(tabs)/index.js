@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import flashcards from "./flashcards";
 
 const TabIcon = ({ name, color }) => {
   return (
