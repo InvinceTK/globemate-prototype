@@ -10,11 +10,11 @@ import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import flashcards from "./flashcards";
 
-const TabIcon = ({ name, color }) => {
+const TabIcon = ({ name, color,content }) => {
   return (
     <View style={styles.iconContainer}>
       <Ionicons name={name} size={24} color={color} />
-      <Text style={{ color }}>{name.charAt(0).toUpperCase() + name.slice(1)}</Text>
+      <Text style={{ color }}>{content.charAt(0).toUpperCase() + content.slice(1)}</Text>
     </View>
   );
 };
@@ -40,17 +40,17 @@ function App() {
           title: "Cuisine",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon name="restaurant" color={color} />
+            <TabIcon name="restaurant" content = "restaurant" color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="splashscreen"
         options={{
-          title: "Index",
+          title: "home",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon name="home" color={color} />
+            <TabIcon name="home" content = "home" color={color} />
           ),
         }}
       />
@@ -60,7 +60,7 @@ function App() {
           title: "Flashcards",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon name="book" color={color} />
+            <TabIcon name="book" content = "flashcards" color={color} />
           ),
         }}
       />
